@@ -12,13 +12,25 @@ public class CorsConfig {
     @Bean
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {
+
             @Override
             public void addCorsMappings(@NonNull CorsRegistry registry) {
-                registry.addMapping("/**") // Apply to all endpoints in the app
-                        .allowedOrigins("http://localhost:4200") // Allow Angular dev server
-                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH") // Allow all common HTTP verbs
-                        .allowedHeaders("*") // Allow all request headers
-                        .allowCredentials(true); // Allow cookies/auth tokens if needed later
+
+                registry.addMapping("/**")
+                        .allowedOrigins(
+                                "http://localhost:4200",
+                                "https://todoarushi.netlify.app"
+                        )
+                        .allowedMethods(
+                                "GET",
+                                "POST",
+                                "PUT",
+                                "DELETE",
+                                "OPTIONS",
+                                "PATCH"
+                        )
+                        .allowedHeaders("*")
+                        .allowCredentials(true);
             }
         };
     }
