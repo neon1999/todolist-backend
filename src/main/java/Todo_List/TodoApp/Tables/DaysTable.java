@@ -18,7 +18,7 @@ public class DaysTable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long dayId;
     public String day;
-    public Date date;
+    public String date;
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "day" )
     public List<TodosTable> todos;
 }

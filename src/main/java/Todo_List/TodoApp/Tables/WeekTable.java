@@ -17,8 +17,8 @@ public class WeekTable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
-    public Date weekStart;
-    public Date weekEnd;
+    public String weekStart;
+    public String weekEnd;
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "week" )
     public List<TodosTable> todos;
 

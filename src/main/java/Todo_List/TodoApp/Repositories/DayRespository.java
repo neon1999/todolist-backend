@@ -9,7 +9,7 @@ import java.util.Optional;
 
 @Repository
 public interface DayRespository extends JpaRepository<DaysTable,Long> {
-    Optional<DaysTable> findByDate(Date date);
+    Optional<DaysTable> findByDate(String date);
 
-    boolean existsByDate(Date date);
+    boolean existsByDate(String date);
 }

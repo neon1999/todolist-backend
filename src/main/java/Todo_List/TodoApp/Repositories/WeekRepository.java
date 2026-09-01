@@ -10,7 +10,7 @@ import java.util.Optional;
 
 @Repository
 public interface WeekRepository extends JpaRepository<WeekTable,Long> {
-    Optional<WeekTable> findByWeekStart(Date weekStart);
+    Optional<WeekTable> findByWeekStart(String weekStart);
 
-    boolean existsByWeekStart(Date weekStart);
+    boolean existsByWeekStart(String weekStart);
 }

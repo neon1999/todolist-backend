@@ -16,10 +16,10 @@ import java.util.List;
 public class createTodoInputModel {
 
     public String task;
-    public Date date;
+    public String date;
     public String day;
-    public Date weekStart;
-    public Date weekEnd;
+    public String weekStart;
+    public String weekEnd;
     public TodoType todoType;
     public List<TodosTable> todos;
     public Long parentId;
